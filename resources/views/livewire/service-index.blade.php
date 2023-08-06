@@ -6,8 +6,8 @@
                     <div>
                         <center><h1 class="text-3xl font-bold mb-8">Menu Layanan Jasa</h1></center>
                         <div class="mt-8">
-                        @if (Auth::user()->role == 'admin')
-                            <button wire:click="$set('showCreateForm', true)" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">Add Service</button>
+                            @if (Auth::user()->role == 'admin')
+                                <button wire:click="$set('showCreateForm', true)" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">Add Service</button>
                             @endif
                         </div>
                         <div class="center">{{ $services->links() }}</div>
@@ -35,12 +35,11 @@
                                         </div>
                                         <div class="px-6 py-4">
                                             <center>
-                                            <a href="#" wire:click="showServiceDetail({{ $service->id }})" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Detail</a>
-                                            @if (Auth::user()->role == 'admin')
-                                                <button wire:click="deleteService({{ $service->id }})" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">Hapus</button>
-                                            @endif
+                                                <a href="#" wire:click="showServiceDetail({{ $service->id }})" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Detail</a>
+                                                @if (Auth::user()->role == 'admin')
+                                                    <button wire:click="deleteService({{ $service->id }})" class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">Hapus</button>
+                                                @endif
                                             </center>
-                                            
                                         </div>
                                     </div>
                                 @endforeach

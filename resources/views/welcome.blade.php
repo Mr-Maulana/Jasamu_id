@@ -9,6 +9,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
         <!-- Styles -->
         <style>
@@ -35,15 +37,17 @@
                 <div class="flex justify-center">
                     <h1 style="color:blue; font-size:300%;">JASAMU</h1>
                 </div>
-
                 <div>
                     <div class="mb-4 text-sm text-gray-600">
-            Welcome to My Website! Click the button below to get started.
-        </div>
-            </div>
+                        Welcome to My Website! Click the button below to get started.
+                    </div>
+                    <div class="mt-8">
+                        <center><a href="{{ route('register') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Get Started</a></center>
+                    </div>
+                </div>
                 <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                            JASAMU.ID                        
+                    <div class="text-sm text-gray-500 sm:text-left">
+                        JASAMU.ID
                     </div>
                 </div>
             </div>
